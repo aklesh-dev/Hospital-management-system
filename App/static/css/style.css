@@ -38,6 +38,10 @@ body{
     
 }
 
+.icon-width{
+    width: 45px;
+}
+
 /*--------------- BACKEND -------------- */
 .side-line{
     width: 70px;

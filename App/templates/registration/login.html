@@ -13,21 +13,27 @@
 <a href="{% url 'frontend' %}" class="btn btn-outline-secondary btn-sm border-light text-light" id="btn-nav">GO BACK</a>
 {% endblock btn-nav %}
 
+<!-- Footer (style:color) -->
+{% block footer-style %}
+    style="color: #a9a9a9; text-decoration:none"
+{% endblock footer-style %}
+
+
 <!-- Page Content -->
 {% block content%}
-<div class="container mt-5">
+<div class="container mt-5 col-md-5">
     <div class="card p-3 border-dark  ">
         <span class="btn btn-outline-dark mt-3"><i class="fa fa-lock"></i>&nbsp; RESTRICTED ACCESS</span>
-        <form action="" method="post" autocomplete="off" novalidate >
+        <form method="post" autocomplete="off" novalidate >
             {% csrf_token %}
             <!-- username -->
             <div class="input-group mb-2 mt-5">
-                <span class="input-group-text"><i class="fa fa-user-alt"></i></span>
+                <span class=" btn border-secondary input-group-text icon-width"><i class="fa fa-user-alt"></i></span>
                 <input type="text" class="form-control" name="username" placeholder="Username">
             </div>
             <!-- password  -->
             <div class="input-group mb-2">
-                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                <span class=" btn border-secondary input-group-text icon-width"><i class="fa fa-lock"></i></span>
                 <input type="password" class="form-control" name="password" placeholder="Password">
             </div>
             <input type="submit" class="btn btn-primary btn-sm mb-3 mt-4" value="Enter" id="btn-enter">

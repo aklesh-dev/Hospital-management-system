@@ -36,6 +36,10 @@
                         {% endblock nav-content%}
                     </a>
                 </div>
+
+                <!-- Time ====(ROOT)==== -->
+                {% block time %} {% endblock time %}
+
                 <div class="col-sm">
                     {% block btn-nav %}
                     <a href="{% url 'backend' %}" class="btn btn-outline-info btn-sm border-light" id="btn-nav">Login</a>
@@ -55,7 +59,7 @@
         <div class="text-center p-3" style="background-color:rgba(0, 0, 0, 0.2);">
             Copyright &copy; {% now "Y" %} <span>All right reserved</span> | Made with
             <i class="text-danger fas fa-heartbeat blink_me" style="font: size 15px;"></i> by
-            <a href="#" target="_blank" style="color: #0dcaf0; text-decoration:none">Aklesh | Django Developer</a>
+            <a href="#" target="_blank" {% block footer-style %} style="color: #0dcaf0; text-decoration:none" {% endblock footer-style %}>Aklesh | Django Developer</a>
         </div>
     </footer>
 
