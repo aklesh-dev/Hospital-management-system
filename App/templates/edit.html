@@ -23,6 +23,12 @@ Registered at: <span class="text-dark">{{ patient.created_at | date:'m/d/Y (H:i)
     <i class="fas fa-hdd"></i>&nbsp; Save
 {% endblock add-btn%}
 
+<!-- Reset btn  -->
+{% block Btn-reset %}
+    <button type="reset" class="btn btn-secondary btn-sm"><i class="fas fa-sync-alt"></i>&nbsp; Reset</button>
+{% endblock Btn-reset %}
+
+
 <!------------ All input extended -------------->
 <!-- Name -->
 {% block block-name %}value = "{{ patient.name }}"{% endblock block-name %}
@@ -38,6 +44,7 @@ Registered at: <span class="text-dark">{{ patient.created_at | date:'m/d/Y (H:i)
 {% endblock select %}
 <!-- Note -->
 {% block note %}{{patient.note}}{% endblock note%}
+
 
 <!-- Individual patient Id -->
 {% block Id-hidden %}
